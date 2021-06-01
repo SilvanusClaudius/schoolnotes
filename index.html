@@ -179,8 +179,6 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>Draft of 'Dynamics'</li>
-
 <li>Dynamics</li>
 
 <li>Fundamentals of Materials</li>
@@ -10284,7 +10282,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210601033007713" list="Welcome [[Draft of 'Dynamics']] [[Notes to Self]]" modified="20210601033007713" title="$:/StoryList">
+<div created="20210601033319643" list="Dynamics Welcome [[Notes to Self]]" modified="20210601033319643" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10396,7 +10394,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210531152143991" draft.of="Dynamics" draft.title="Dynamics" modified="20210601033009377" title="Draft of 'Dynamics'">
+<div created="20210531152143991" modified="20210601033704090" title="Dynamics">
 <pre>Particle Kinematics
 
 Position vector: ''r'' = r(t)
@@ -10409,7 +10407,7 @@ $$
 \bold{a} = \text{\&quot;{r}} = \frac{dv}{dt} = \frac{dv}{dr} \frac{dr}{dt} = v \frac{dv}{dr}
 $$
 
-Cartesian:
+Cartesian Coordinates:
 
 $$
 \bold{r} = x\bold{i} + y\bold{j} + z\bold{k}
@@ -10419,7 +10417,7 @@ $$ $$
 \bold{a} = \ddot x \bold{i} + \ddot y \bold{j} + \ddot z \bold{k}
 $$
 
-Polar:
+Polar Coordinates:
 $$
 \bold{r} = r \bold{e_r}
 $$ $$
@@ -10428,38 +10426,13 @@ $$ $$
 \bold{a} = ( \ddot r - r \dot \theta^2 ) \bold{e_r} + (r \ddot \theta + 2 \dot r \dot \theta) \bold{e_\theta}
 $$
 
-</pre>
-</div>
-<div created="20210531152143991" modified="20210601032334586" title="Dynamics">
-<pre>Particle Kinematics
-
-Position vector: ''r'' = r(t)
-
-Instantaneous velocity vector: $$\bold {v} =\dot r$$
-
-Instantaneous acceleration vector: $$\bold{a} = \dot v = \ddot r$$
-
+Path Coordinates:
 $$
-\bold{a} = \text{\&quot;{r}} = \frac{dv}{dt} = \frac{dv}{dr} \frac{dr}{dt} = v \frac{dv}{dr}
-$$
-
-Cartesian:
-
-$$
-\bold{r} = x\bold{i} + y\bold{j} + z\bold{k}
+\bold{r} =\bold{r} (s(t))
 $$ $$
-\bold{v} = \dot x \bold{i} + \dot y \bold{j} + \dot z \bold{k}
+\bold{v} = v \bold{e_t} = \rho \dot \phi \bold{e_t}
 $$ $$
-\bold{a} = \ddot x \bold{i} + \ddot y \bold{j} + \ddot z \bold{k}
-$$
-
-Polar:
-$$
-\bold{r} = r \bold{e_r}
-$$ $$
-\bold{v} = \dot r \bold{e_r} + r \dot \theta \bold{e_\theta}
-$$ $$
-\bold{a} = ( \ddot r - r \dot \theta^2 ) \bold{e_r} + (r \ddot \theta + 2 \dot r \dot \theta) \bold{e_\theta}
+\bold{a} = \dot v \bold{e_t} + v^2/\rho \bold{e_n} =\dot v \bold{e_t} + \rho \dot \phi^2 \bold{e_n}
 $$
 
 </pre>
