@@ -179,6 +179,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Draft of 'Dynamics'</li>
+
 <li>Dynamics</li>
 
 <li>Fundamentals of Materials</li>
@@ -10267,22 +10269,22 @@ Error message and password prompt
 <div created="20210531152945110" modified="20210531152946894" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Plugins</pre>
 </div>
-<div created="20210530145925745" modified="20210531155123841" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20210530145925745" modified="20210601030206173" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20210530145928382" modified="20210530145928382" title="$:/state/tab-2065006209">
+<div created="20210530145928382" modified="20210601030156112" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20210530151023000" modified="20210531152942889" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Plugins</pre>
+<div created="20210530151023000" modified="20210601030224972" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Types</pre>
 </div>
-<div created="20210530145916598" modified="20210531155120424" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210530145916598" modified="20210601031026435" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210531153317055" list="$:/ControlPanel [[Notes to Self]] $:/plugins/tiddlywiki/katex Welcome Dynamics" modified="20210531160212376" title="$:/StoryList">
+<div created="20210601033007713" list="Welcome [[Draft of 'Dynamics']] [[Notes to Self]]" modified="20210601033007713" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10394,19 +10396,71 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210531152143991" modified="20210531160046838" title="Dynamics">
+<div created="20210531152143991" draft.of="Dynamics" draft.title="Dynamics" modified="20210601033009377" title="Draft of 'Dynamics'">
 <pre>Particle Kinematics
 
 Position vector: ''r'' = r(t)
 
-Instantaneous velocity vector: $$\bold {v} =\text{\.{r}}$$
+Instantaneous velocity vector: $$\bold {v} =\dot r$$
 
-Instantaneous acceleration vector: $$\bold{a} = \text{\.{v}} = \text{\&quot;{r}} $$
+Instantaneous acceleration vector: $$\bold{a} = \dot v = \ddot r$$
 
 $$
 \bold{a} = \text{\&quot;{r}} = \frac{dv}{dt} = \frac{dv}{dr} \frac{dr}{dt} = v \frac{dv}{dr}
 $$
 
+Cartesian:
+
+$$
+\bold{r} = x\bold{i} + y\bold{j} + z\bold{k}
+$$ $$
+\bold{v} = \dot x \bold{i} + \dot y \bold{j} + \dot z \bold{k}
+$$ $$
+\bold{a} = \ddot x \bold{i} + \ddot y \bold{j} + \ddot z \bold{k}
+$$
+
+Polar:
+$$
+\bold{r} = r \bold{e_r}
+$$ $$
+\bold{v} = \dot r \bold{e_r} + r \dot \theta \bold{e_\theta}
+$$ $$
+\bold{a} = ( \ddot r - r \dot \theta^2 ) \bold{e_r} + (r \ddot \theta + 2 \dot r \dot \theta) \bold{e_\theta}
+$$
+
+</pre>
+</div>
+<div created="20210531152143991" modified="20210601032334586" title="Dynamics">
+<pre>Particle Kinematics
+
+Position vector: ''r'' = r(t)
+
+Instantaneous velocity vector: $$\bold {v} =\dot r$$
+
+Instantaneous acceleration vector: $$\bold{a} = \dot v = \ddot r$$
+
+$$
+\bold{a} = \text{\&quot;{r}} = \frac{dv}{dt} = \frac{dv}{dr} \frac{dr}{dt} = v \frac{dv}{dr}
+$$
+
+Cartesian:
+
+$$
+\bold{r} = x\bold{i} + y\bold{j} + z\bold{k}
+$$ $$
+\bold{v} = \dot x \bold{i} + \dot y \bold{j} + \dot z \bold{k}
+$$ $$
+\bold{a} = \ddot x \bold{i} + \ddot y \bold{j} + \ddot z \bold{k}
+$$
+
+Polar:
+$$
+\bold{r} = r \bold{e_r}
+$$ $$
+\bold{v} = \dot r \bold{e_r} + r \dot \theta \bold{e_\theta}
+$$ $$
+\bold{a} = ( \ddot r - r \dot \theta^2 ) \bold{e_r} + (r \ddot \theta + 2 \dot r \dot \theta) \bold{e_\theta}
+$$
 
 </pre>
 </div>
