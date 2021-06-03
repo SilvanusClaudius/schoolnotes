@@ -10702,7 +10702,7 @@ High electrical and thermal conductivity, heavy and dense, shiny and polished, d
 <pre>Latex/Katex Reference: https://katex.org/docs/support_table.html
 </pre>
 </div>
-<div created="20210603031621935" modified="20210603032659230" title="Open Loop Motor Speed Control">
+<div created="20210603031621935" modified="20210603032738266" title="Open Loop Motor Speed Control">
 <pre>!! DC motor connected to inertial load
 
 Transfer function is that of angular position with respect to voltage: $$ \frac{\theta_m (s)}{v_a (s)}$$
@@ -10729,11 +10729,13 @@ Motor Constants:
 $$
 e_m = K_e \frac{d\theta_m}{dt}
 $$ $$
-E_m(s)
+E_m(s) = K_e s \Theta_m (s)
 $$
-
+and
 $$
 T = K_t i_a
+$$ $$
+T(s) = K_t I_a (s)
 $$</pre>
 </div>
 <div created="20210601055148955" modified="20210601065739391" title="Polymers">
