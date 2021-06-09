@@ -193,6 +193,8 @@ Error message and password prompt
 
 <li>Dynamics of Particles</li>
 
+<li>Dynamics of Rigid Bodies</li>
+
 <li>Fluid Mechanics and Thermodynamics</li>
 
 <li>Fundamentals of Materials</li>
@@ -206,8 +208,6 @@ Error message and password prompt
 <li>Open Loop Motor Speed Control</li>
 
 <li>Polymers</li>
-
-<li>Rigid Bodies</li>
 
 <li>Test 2</li>
 
@@ -10312,7 +10312,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210609155743804" list="Welcome Dynamics [[Dynamics of Particles]] [[Rigid Bodies]] [[Notes to Self]]" modified="20210609160408596" title="$:/StoryList">
+<div created="20210609155743804" list="Welcome Dynamics [[Dynamics of Particles]] [[Dynamics of Rigid Bodies]] [[Notes to Self]]" modified="20210609160408596" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10640,6 +10640,32 @@ where $$ \bold{L}^\text{(0)} = \bold{r} \times \bold{p} = \bold{r} \times m\bold
 
 Coefficient of Restitution: $$e = \frac{\lvert \text{relative velocity of separation} \lvert}{\lvert \text{relative velocity of approach} \lvert} $$</pre>
 </div>
+<div created="20210609160256063" modified="20210609160427706" title="Dynamics of Rigid Bodies">
+<pre>!! ''Rigid Body Kinematics''
+
+Translation (Either rectilinear or curvilinear): Velocity and Acceleration are the same for every point within the rigid body
+
+Rotation about fixed axis through A: 
+
+$$ \bold{v}_B = \bold{\omega} \times \bold{r}_\text{B|A}$$
+
+$$ \bold{a}_B = \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A})$$
+
+General plane motion in translating axis (with origin A):
+
+$$ \bold{v}_B = \bold{v}_A + \bold{\omega} \times \bold{r}_\text{B|A}$$
+
+$$ \bold{a}_B = \bold{a}_A + \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A})$$
+
+General plane motion in rotating axis (with origin A):
+
+$$ \bold{v}_B = \bold{v}_A + \bold{\omega} \times \bold{r}_\text{B|A} + \bold{v}_\text{B/body}$$
+
+$$ \bold{a}_B = \bold{a}_A + \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A}) + \bold{a}_\text{B/body} + 2\omega \times \bold{v}_\text{B/body}$$
+
+!! ''Rigid Body Kinetics''
+</pre>
+</div>
 <div created="20210601041502626" modified="20210603035650225" title="Fluid Mechanics and Thermodynamics">
 <pre>! Fluids
 
@@ -10917,32 +10943,6 @@ Thermopolymers (thermoplastics) have rigid covalent bonds which allow rotation a
 Thermosets react to form a new substance which is covalently bonded. e.g. Epoxy resin
 
 Elastomers do not support plastic deformation so are technically brittle. However freedom between cross links allows significant elastic deformation.</pre>
-</div>
-<div created="20210609160256063" modified="20210609160318338" title="Rigid Bodies">
-<pre>!! ''Rigid Body Kinematics''
-
-Translation (Either rectilinear or curvilinear): Velocity and Acceleration are the same for every point within the rigid body
-
-Rotation about fixed axis through A: 
-
-$$ \bold{v}_B = \bold{\omega} \times \bold{r}_\text{B|A}$$
-
-$$ \bold{a}_B = \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A})$$
-
-General plane motion in translating axis (with origin A):
-
-$$ \bold{v}_B = \bold{v}_A + \bold{\omega} \times \bold{r}_\text{B|A}$$
-
-$$ \bold{a}_B = \bold{a}_A + \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A})$$
-
-General plane motion in rotating axis (with origin A):
-
-$$ \bold{v}_B = \bold{v}_A + \bold{\omega} \times \bold{r}_\text{B|A} + \bold{v}_\text{B/body}$$
-
-$$ \bold{a}_B = \bold{a}_A + \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A}) + \bold{a}_\text{B/body} + 2\omega \times \bold{v}_\text{B/body}$$
-
-!! ''Rigid Body Kinetics''
-</pre>
 </div>
 <div created="20210530151002600" modified="20210530151012690" tags="" title="Test 2">
 <pre>Hello this is the second test</pre>
