@@ -10473,101 +10473,13 @@ Composite properties also depend on the structure of the composite at a higher l
 
 * Tuner Algorithms</pre>
 </div>
-<div created="20210531152143991" modified="20210609160406081" title="Dynamics">
-<pre>!! ''Particle Kinematics''
-
-Position vector: ''r'' = r(t)
-
-Instantaneous velocity vector: $$\bold {v} =\dot r$$
-
-Instantaneous acceleration vector: $$\bold{a} = \dot v = \ddot r$$
-
-$$
-\bold{a} = \text{\&quot;{r}} = \frac{dv}{dt} = \frac{dv}{dr} \frac{dr}{dt} = v \frac{dv}{dr}
-$$
-
-Cartesian Coordinates:
-
-$$
-\bold{r} = x\bold{i} + y\bold{j} + z\bold{k}
-$$ $$
-\bold{v} = \dot x \bold{i} + \dot y \bold{j} + \dot z \bold{k}
-$$ $$
-\bold{a} = \ddot x \bold{i} + \ddot y \bold{j} + \ddot z \bold{k}
-$$
-
-Polar Coordinates:
-$$
-\bold{r} = r \bold{e_r}
-$$ $$
-\bold{v} = \dot r \bold{e_r} + r \dot \theta \bold{e_\theta}
-$$ $$
-\bold{a} = ( \ddot r - r \dot \theta^2 ) \bold{e_r} + (r \ddot \theta + 2 \dot r \dot \theta) \bold{e_\theta}
-$$
-
-Path Coordinates:
-$$
-\bold{r} =\bold{r} (s(t))
-$$ $$
-\bold{v} = v \bold{e_t} = \rho \dot \phi \bold{e_t}
-$$ $$
-\bold{a} = \dot v \bold{e_t} + \frac{v^2}{\rho} \bold{e_n} =\dot v \bold{e_t} + \rho \dot \phi^2 \bold{e_n}
-$$
-
-!! ''Particle Kinetics''
-
-1st Law:  $$ \bold{p} = m \bold{v}$$, where $$\bold{p}$$ is linear momentum vector
-
-2nd Law: $$ \bold{F} = m \bold{a}$$
-
-Work: $$ W_\text{AB} = \int_{A}^{B} \bold{F}\cdot dr$$
-
-If the force is conservative (where work done is independent of path taken eg gravity), $$ W_\text{AB} = V_A - V_B$$ where V is the potential energy 
-
-Impulse and Momentum:
-
-Impulse Law:
-
-$$
-m\bold{v_1} + \int_{t_1}^{t_2} \bold{F} dt = m\bold{v_2}
-$$
-
-Moment of Momentum Theorem:
-
-$$
-\frac{d\bold{L}^\text{(0)}}{dt} = \bold{M}^\text{(0)} \rightarrow \bold{L}_i^\text{(0)} + \int \bold{M}^\text{(0)} dt = \bold{L}_f^\text{(0)}
-$$ 
-
-where $$ \bold{L}^\text{(0)} = \bold{r} \times \bold{p} = \bold{r} \times m\bold{v}$$ is the moment of momentum about 0 and $$ \bold{M}^\text{(0)}=\bold{r} \times \bold{F}$$ is the moment of the force acting on the point mass about 0.
-
-Coefficient of Restitution: $$e = \frac{\lvert \text{relative velocity of separation} \lvert}{\lvert \text{relative velocity of approach} \lvert} $$
+<div created="20210531152143991" modified="20210609160647233" title="Dynamics">
+<pre>Dynamics is the study of motion and forces of objects. The syllabus is broken down into two main sections:
 
 * [[Dynamics of Particles]]
 * [[Dynamics of Rigid Bodies]]
 
-!! &quot;Rigid Body Kinematics&quot;
 
-Translation (Either rectilinear or curvilinear): Velocity and Acceleration are the same for every point within the rigid body
-
-Rotation about fixed axis through A: 
-
-$$ \bold{v}_B = \bold{\omega} \times \bold{r}_\text{B|A}$$
-
-$$ \bold{a}_B = \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A})$$
-
-General plane motion in translating axis (with origin A):
-
-$$ \bold{v}_B = \bold{v}_A + \bold{\omega} \times \bold{r}_\text{B|A}$$
-
-$$ \bold{a}_B = \bold{a}_A + \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A})$$
-
-General plane motion in rotating axis (with origin A):
-
-$$ \bold{v}_B = \bold{v}_A + \bold{\omega} \times \bold{r}_\text{B|A} + \bold{v}_\text{B/body}$$
-
-$$ \bold{a}_B = \bold{a}_A + \bold{a} \times \bold{r}_\text{B|A} + \bold{\omega} \times (\bold{\omega}\times\bold{r}_\text{B|A}) + \bold{a}_\text{B/body} + 2\omega \times \bold{v}_\text{B/body}$$
-
-!! &quot;Rigid Body Kinetics&quot;
 
 </pre>
 </div>
