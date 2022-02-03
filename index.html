@@ -11038,13 +11038,22 @@ Thermosets react to form a new substance which is covalently bonded. e.g. Epoxy 
 
 Elastomers do not support plastic deformation so are technically brittle. However freedom between cross links allows significant elastic deformation.</pre>
 </div>
-<div created="20220203003841118" modified="20220203005123908" title="Regression">
+<div created="20220203003841118" modified="20220203005338630" title="Regression">
 <pre>!!! Linear Regression
 
 OLS estimator evaluation function:
 $$
 \underset{w}{argmin} \bigg( \frac{1} {2} \sum_{i=1}{n} (y^{(i)} - \bold{w} \cdot \bold{x}^{(i)})^2 \bigg)
 $$
+
+Squared error function is 1) Intuitive 2) Smooth 3) Convex
+
+Why should we pick the least squares estimator? Motivate the choice through:
+* Additive Noise Model with iid Noise
+* Additive Noise Model with Gaussian Noise
+* Additive Noise Model with Laplacian Noise
+
+
 !!! Polynomial Regression</pre>
 </div>
 <div created="20210530151002600" modified="20210530151012690" tags="" title="Test 2">
