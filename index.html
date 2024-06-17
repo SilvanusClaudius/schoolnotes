@@ -11433,12 +11433,32 @@ Why should we pick the least squares estimator? Motivate the choice through:
 * Steam Turbines
 * Gas Turbines</pre>
 </div>
-<div created="20240617153600680" modified="20240617153921169" title="Unsupervised Learning">
+<div created="20240617153600680" modified="20240617154646945" title="Unsupervised Learning">
 <pre>In unsupervised learning we seek to learn from unlabelled data.
 
 !! Clustering
 
-Sample task - market segmentation analysis
+Sample task - market segmentation analysis, image segmentation, image compression, semi supervised learning
+
+
+!! K-means Algorithm
+
+Find clusters such that the sum of the distance of each instance to its closest centroid is minimised.
+
+Objective Function: sum of squared distance between each instance and its assigned cluster
+
+Optimizing is hard - usual approach is K-means which is a greedy optimisation that comprises of the E step and the M step
+
+Drawback of K-means:
+* Value of k must be specified prior to performing clustering
+* Objective is non-convex
+* Works poorly on clusters that are non convex in shape  (assumes clusters are hyperspheres)
+* Works poorly on clusters of different sizes
+* Sensitive to data scaling
+
+
+!! Mixture of Gaussians
+
 
 
 
