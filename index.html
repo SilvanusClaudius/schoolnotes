@@ -201,6 +201,8 @@ Error message and password prompt
 
 <li>Control Theory</li>
 
+<li>Decision Making</li>
+
 <li>Dynamics</li>
 
 <li>Dynamics II</li>
@@ -238,6 +240,8 @@ Error message and password prompt
 <li>Mechanics of Solids and Structures</li>
 
 <li>Metals</li>
+
+<li>Neural Networks</li>
 
 <li>Notes to Self</li>
 
@@ -10357,8 +10361,8 @@ Error message and password prompt
 <div created="20210530145925745" modified="20240618003846726" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20210530145928382" modified="20240618004031216" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/DownloadSaver</pre>
+<div created="20210530145928382" modified="20240619155609811" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20210530151023000" modified="20210601030224972" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Types</pre>
@@ -10369,7 +10373,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20240618002308787" list="$:/ControlPanel Welcome [[Machine Learning and Neural Computation]] [[Hugging Face Transformers and Diffusers]] [[Notes to Self]]" modified="20240618004035112" title="$:/StoryList">
+<div created="20240619155608349" list="$:/ControlPanel Welcome [[Notes to Self]]" modified="20240619155608349" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10601,6 +10605,25 @@ Composite properties also depend on the structure of the composite at a higher l
 !! 7: PID Control and System Identification
 
 * Tuner Algorithms</pre>
+</div>
+<div created="20240618023743296" modified="20240618024201285" title="Decision Making">
+<pre>A 2 part lottery:
+
+Part 1:
+A. A sure gain of $240
+B. A 25% chance of winning $1000, and a 75% chance of winning nothing
+
+Part 2:
+C. A sure loss of $750
+D. A 75% chance of losing $1000 and a 25% chance of losing nothing.
+
+''Human decision making in this task is non optimal! ''Most people prefer A and D. But B and C would give you an extra $10 no matter what happens.
+
+Choosing A and D: 75% chance of -760 (gain 240 on A but lose 1000 on D), 25% chance of +240 (gain 240 on A, lose nothing on D)
+
+Choosing B and C: 75% chance of -750 (gain nothing on B and lose 750 on C), 25% chance of +250 (gain 1000 on B, lose 750 on C)
+
+ </pre>
 </div>
 <div created="20210531152143991" modified="20210609160647233" title="Dynamics">
 <pre>Dynamics is the study of motion and forces of objects. The syllabus is broken down into two main sections:
@@ -11076,20 +11099,44 @@ Spark ignition - Otto cycle
 
 Compression Ignition - Diesel cycle</pre>
 </div>
-<div created="20240618003220052" modified="20240618003329202" title="Hugging Face Transformers and Diffusers">
+<div created="20240618003220052" modified="20240618023417535" title="Hugging Face Transformers and Diffusers">
 <pre>!!The annotated Diffusion Model
 
 https://huggingface.co/blog/annotated-diffusion
 
+Denoising Diffusion probabilistic models (aka score based generative models, autoencoders)
 
+Coverts noise from some simple distribution to a data sample. Neural network learns to gradually denoise data starting from pure noise.
+
+2 processes - a fixed forward diffusion process that gradually adds noise. A learned reverse denoising process where a neural network is trained to denoise an image starting from pure noise until you end up with an actual image
+
+
+The forward process introduces noise to a single image that is drawn from a conditional gaussian distribution which is fixed. In the reverse process, we are trying to guess what this conditional gaussian distribution is so that when we denoise, we end up with the real distribution. The actual conditional gaussian distribution is not possible to be learned, as that would require knowing the distribution of all possible images. The neural network approximately learns this conditional probability distribution, and will represent it in terms of its mean and variance.
+
+Define an objective function so that neural network can be trained. NN will learn to predict the added noise. The NN is optimised using a simple Mean Squared error between the true and predicted gaussian noise.
+
+The NN used is an autoencoder. Takes in a noised image at a particular time step and returns the predicted noise. U-net is a type of autoencoder.
 
 !! How do Transformers work
 
 https://huggingface.co/learn/nlp-course/chapter1/4
 
+https://nlp.seas.harvard.edu/annotated-transformer/
+
+
+Transformers are trained on large amounts of raw text in a self supervised fashion. A general pretrained model still needs to go through a process of transfer learning, which fine tunes it in  a supervised way using tasks such as causal language modelling or masked language modelling.
+
+Transformers typically contain a decoder and an encoder. Encoder to understand inputs, decoder for generative tasks.
+
+Attention layers help model to pay specific attention to certain words. A word by itself has meaning, but it is deeply affected by context.
+
+Encoder models  (bi-directional attention/auto encoders). Pretraining of such models involves corrupting a given sentence and tasking the model with finding or reconstructing the initial sentence. ALBERT, BERT, ELECTRA, DistilBERT.
+
+Decoder models (autoregressive models). Predict the next word in a sentence. GPT, GPT2, Transformer XL.
+
 </pre>
 </div>
-<div created="20240617152551636" modified="20240617152822900" title="Intelligent Systems">
+<div created="20240617152551636" modified="20240618023735542" title="Intelligent Systems">
 <pre>!! Maths Basics
 
 !! 1) Intelligence and Systems
@@ -11098,7 +11145,7 @@ https://huggingface.co/learn/nlp-course/chapter1/4
 
 !! 3) Problem Solving
 
-!! 4) Decision Making
+!! 4) [[Decision Making]]
 
 !! 5) Learning
 
@@ -11338,6 +11385,58 @@ Equilibrium equations, Constitutive Laws, Compatibility Relations
 <pre>!! Metals
 
 High electrical and thermal conductivity, heavy and dense, shiny and polished, deformable. All due to the metallic bonding - a sea of delocalised electrons surrounding an array of positive ions. Planes of ions slip past each other. Volume is conserved in plastic deformation.</pre>
+</div>
+<div created="20240618024510822" modified="20240618033440786" title="Neural Networks">
+<pre>Artificial neuron is a model of the biological neuron. Takes inputs, combines into a ''weighted ''sum (and adds a biased term), passes it through an activation function, and then outputs the result.
+
+Main aim is to learn the ideal weights.
+
+NN consists of many neurons. Weights and activation functions might vary across the network, and how units are connected is characterised by the architecture of the NN. Many different architectures.
+
+Feed forward NN and Recurrent NN (outputs can loop back and be used as inputs of the same unit).
+
+Multilayer perceptron is a particular form of FFNN. Fully connected - every unit in one layer is connected to every unit in the next.
+
+Input layer -&gt; Hidden layers -&gt; Output layers.
+
+Number of layers is the depth, number of units in a layer is the width.
+
+NNs can be very expressive. NNs learn features implicitly. Deeper layers learn more and more features...without any guidance. Narrow, deep networks are generally better than wide shallow ones - deep learning.
+
+MLP is also known as a universal function approximator. Why?
+
+Evaluation/Loss functions:
+* Regression - squared loss
+* Binary classification - logistic sigmoid function, cross entropy
+* Multi classification - softmax function, cross entropy
+
+Forward propagation
+
+Optimising the loss function:
+In general, cannot optimise analytically, so use a numerical solution such as gradient descent. From gradient descent, applying chain rule allows us to optimise weights through a key technique known as the ''backpropagation algorithm''.
+
+So the general algorithm with backpropagation and optimisation of the loss function:
+# Initialise with starting weights and biases
+# Apply an input vector and forward propagate
+# Evaluate the overall error
+# Use backprop algorithm to get errors for individual neurons inside the hidden layers
+# Evaluate the derivatives of the errors
+# Updated new weights and biases with the evaluated derivatives (the gradient descent)
+
+NNs are prone to overfitting because of their capacity, and require regularisation.
+* Weight Decay - penalty term added to loss function
+* Reducing capacity - add a bottleneck layer with fewer units than its neighbours
+* Early stopping - limit number of epochs by looking at training curve
+
+
+
+
+
+
+
+
+
+</pre>
 </div>
 <div created="20210531155132563" modified="20220203004338957" tags="" title="Notes to Self">
 <pre>Latex/Katex Reference: https://katex.org/docs/support_table.html
